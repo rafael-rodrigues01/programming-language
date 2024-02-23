@@ -7,15 +7,15 @@ import java.util.Scanner;
 
 public class App {
   public static void main(String[] args) {
-    int n1, n2, media;
+    double n1, n2, media;
 
         Scanner in = new Scanner(System.in);
 
         System.out.println("Digite a primeira nota:");
-        n1 = in.nextInt();
+        n1 = in.nextDouble();
 
         System.out.println("Digite a segunda nota:");
-        n2 = in.nextInt();
+        n2 = in.nextDouble();
 
         media = (n1 + n2) / 2;
 
