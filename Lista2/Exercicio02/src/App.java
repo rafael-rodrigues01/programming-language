@@ -3,7 +3,6 @@
  * 2. O usuário entra com dois números
  *  inteiros e o programa indica qual o maior”
  */
-
 import java.util.Scanner;
 
 public class App {
