@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        int firstNumber, secondNumber, result;
+        int firstNumber, secondNumber;
 
         Scanner in = new Scanner(System.in);
 
