@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class App {
   public static void main(String[] args) {
-    double firstSide, secondSide, thirdSide, sumOfBothSides;
+    double firstSide, secondSide, thirdSide;
     boolean triaguloExiste;
 
     Scanner in = new Scanner(System.in);
@@ -20,7 +20,8 @@ public class App {
     System.out.println("Digite o terceiro lado do triângulo:");
     thirdSide = in.nextDouble();
 
-    triaguloExiste = (firstSide + secondSide) > thirdSide && (firstSide + thirdSide) > secondSide && (secondSide + thirdSide) > firstSide;
+    triaguloExiste = (firstSide + secondSide) > thirdSide && (firstSide + thirdSide) > secondSide
+        && (secondSide + thirdSide) > firstSide;
 
     if (triaguloExiste == true) {
       if (firstSide == secondSide && secondSide == thirdSide && thirdSide == firstSide) {
@@ -33,6 +34,8 @@ public class App {
     } else {
       System.out.println("Triângulo inexistente!");
     }
+
+    in.close();
 
   }
 }
