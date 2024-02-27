@@ -25,7 +25,7 @@ public class App {
     if (triaguloExiste == true) {
       if (firstSide == secondSide && secondSide == thirdSide && thirdSide == firstSide) {
         System.out.println("Triângulo equilátero!");
-      } else if (firstSide == secondSide && secondSide == thirdSide || thirdSide == firstSide) {
+      } else if (firstSide == secondSide || firstSide == thirdSide || secondSide == thirdSide) {
         System.out.println("Triângulo isósceles");
       } else {
         System.out.println("Triângulo escaleno");
