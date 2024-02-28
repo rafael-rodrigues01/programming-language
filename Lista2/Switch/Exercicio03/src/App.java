@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class App {
   public static void main(String[] args) throws Exception {
 
-    double base, height, area, perimeter;
+    double perimeter, ray, result, base, height, areaOfTriangle, areaOfRectangle;
     int choice;
 
     Scanner in = new Scanner(System.in);
@@ -20,30 +20,49 @@ public class App {
     System.out.println("Escolha uma opção: ");
     choice = in.nextInt();
 
-    System.out.println("Informe a base:");
-    base = in.nextDouble();
-
-    System.out.println("Informe a altura:");
-    height = in.nextDouble();
-
     System.out.println();
 
     switch (choice) {
       case 1:
-        result = number1 + number2;
-        System.out.println("Resultado: " + number1 + " + " + number2 + " = " + result);
+
+        double pi = Math.PI;
+
+        System.out.println("Digite o raio de um circulo:");
+        ray = in.nextDouble();
+
+        result = Math.pow(ray, 2) * pi;
+
+        System.out.println("A área é: " + result + " cm²");
+
+        in.close();
         break;
       case 2:
-        result = number1 - number2;
-        System.out.println("Resultado: " + number1 + " - " + number2 + " = " + result);
+        System.out.println("Digite a base de um triângulo retângulo:");
+        base = in.nextDouble();
+
+        System.out.println("Digite a altura de um triângulo retângulo:");
+        height = in.nextDouble();
+
+        areaOfTriangle = (base * height) / 2;
+        perimeter = base * height;
+
+        System.out.println("Área: " + areaOfTriangle);
+        System.out.println("Perímetro: " + perimeter);
+
+        in.close();
         break;
       case 3:
-        result = number1 * number2;
-        System.out.println("Resultado: " + number1 + " x " + number2 + " = " + result);
-        break;
-      case 4:
-        result = number1 / number2;
-        System.out.println("Resultado: " + number1 + " / " + number2 + " = " + result);
+        System.out.println("Digite a base de um retângulo:");
+        base = in.nextDouble();
+
+        System.out.println("Digite a altura de um retângulo:");
+        height = in.nextDouble();
+
+        areaOfRectangle = base * height;
+
+        System.out.println("Área do Retângulo: " + areaOfRectangle);
+
+        in.close();
         break;
 
       default:
