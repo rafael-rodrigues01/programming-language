@@ -20,11 +20,12 @@ public class App {
     System.out.println("Digite o terceiro lado do triângulo:");
     thirdSide = in.nextDouble();
 
-    triaguloExiste = (firstSide + secondSide) > thirdSide && (firstSide + thirdSide) > secondSide
-        && (secondSide + thirdSide) > firstSide;
+    triaguloExiste = firstSide < (secondSide + thirdSide) && firstSide > Math.abs(secondSide - thirdSide) &&
+                     secondSide < (firstSide + secondSide) && secondSide > Math.abs(firstSide - thirdSide) &&
+                     thirdSide < (secondSide + firstSide) && thirdSide > Math.abs(secondSide - firstSide);
 
     if (triaguloExiste == true) {
-      if (firstSide == secondSide && secondSide == thirdSide && thirdSide == firstSide) {
+      if (firstSide == secondSide && secondSide == thirdSide) {
         System.out.println("Triângulo equilátero!");
       } else if (firstSide == secondSide || firstSide == thirdSide || secondSide == thirdSide) {
         System.out.println("Triângulo isósceles");
