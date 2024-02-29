@@ -22,6 +22,12 @@ public class App {
 
     delta = Math.pow(b, 2) - 4 * a * c;
 
+    if (delta < 0) {
+      System.out.println("Equação sem raiz");
+      in.close();
+      return;
+    } 
+
     System.out.println(Math.sqrt(delta));
     x1 = (-b + Math.sqrt(delta)) / (2 * a);
     x2 = (-b - Math.sqrt(delta)) / (2 * a);
@@ -32,9 +38,5 @@ public class App {
     
     in.close();
 
-    if (delta < 0) {
-      System.out.println("Equação sem raiz");
-      return;
-    } 
   }
 }
