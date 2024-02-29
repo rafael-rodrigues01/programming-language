@@ -6,12 +6,12 @@ import java.util.Scanner;
 
 public class App {
   public static void main(String[] args) {
-    double number;
+    int number;
 
     Scanner in = new Scanner(System.in);
 
-    System.out.println("Digite um número inteiro entre 6 e 9:");
-    number = in.nextDouble();
+    System.out.println("Digite um número inteiro entre 5 e 9:");
+    number = in.nextInt();
 
     if (number >= 5 && number <= 9) {
       System.out.println("O número digitado é: " + number);
