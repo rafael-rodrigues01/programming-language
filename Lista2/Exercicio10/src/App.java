@@ -2,37 +2,32 @@
 10. Receber três números inteiros e exibi-los em ordem crescente.
  */
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class App {
   public static void main(String[] args) {
-    int number1, number2, number3;
-
+    int menor, meio, maior, aux;
     Scanner in = new Scanner(System.in);
+    System.out.println("Digite 3 inteiros");
+    menor = in.nextInt();
+    meio = in.nextInt();
+    maior = in.nextInt();
 
-    System.out.println("Digite o primeiro número inteiro:");
-    number1 = in.nextInt();
-
-    System.out.println("Digite o segundo número inteiro:");
-    number2 = in.nextInt();
-
-    System.out.println("Digite o terceiro número inteiro:");
-    number3 = in.nextInt();
-
-    int [] numbers = {number1, number2, number3};
-
-    Arrays.sort(numbers);
-
-    System.out.println();
-
-    System.out.println("Números em ordem crescente: \n");
-
-    for (int i : numbers) {
-      System.out.println(i);
+    if (maior < menor) {
+      aux = menor;
+      menor = maior;
+      maior = aux;
     }
-
-    in.close();
-
+    if (maior < meio) {
+      aux = meio;
+      meio = maior;
+      maior = aux;
+    }
+    if (meio < menor) {
+      aux = menor;
+      menor = meio;
+      meio = aux;
+    }
+    System.out.println(menor + " " + meio + " " + maior);
   }
 }
