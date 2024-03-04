@@ -10,7 +10,7 @@ public class App {
 
     Scanner in = new Scanner(System.in);
 
-    while (i <= 100) {
+    while (i < 200) {
       if (i % 4 == 0) {
         System.out.println(i);
       }
