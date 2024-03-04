@@ -1,5 +1,5 @@
 /*
- * Criar um programa que receba 5 números inteiros digitados pelo usuário e ao final exibao maior e o menor números digitados (Obs.: Apenas o maior e o menor número devemser armazenados).
+ * Criar um programa que receba 5 números inteiros digitados pelo usuário e ao final exibao maior e o menor números digitados (Obs.: Apenas o maior e o menor número devem ser armazenados).
  */
 
 import java.util.Scanner;
