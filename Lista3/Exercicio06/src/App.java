@@ -19,6 +19,12 @@ public class App {
 
     System.out.println("\nNúmeros do intervalo:");
 
+    if(number1 > number2) {
+      int aux = number1;
+      number1 = number2;
+      number2 = aux;
+    }
+
     for (int i=number1+1; i<number2; i++){
       System.out.println(i);
     }
