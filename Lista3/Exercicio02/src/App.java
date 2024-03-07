@@ -8,7 +8,7 @@ public class App {
   public static void main(String[] args) throws Exception {
     int number;
     int bigger = 0;
-    int smaller = 1000000000;
+    int smaller = 0;
     int i = 1;
 
     Scanner in = new Scanner(System.in);
@@ -17,6 +17,11 @@ public class App {
       System.out.println("Digite o " + i + " número inteiro:");
       number = in.nextInt();
 
+      if (i == 1) {
+        bigger = number;
+        smaller = number;
+      }
+
       if (number > bigger) {
         bigger = number;
       }
@@ -24,6 +29,7 @@ public class App {
       if (number < smaller) {
         smaller = number;
       }
+
       i++;
     } while (i != 6);
 
