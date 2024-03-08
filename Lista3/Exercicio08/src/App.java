@@ -6,31 +6,25 @@ import java.util.Scanner;
 
 public class App {
   public static void main(String[] args) throws Exception {
-    int number;
-
+    long n;
+    boolean eprimo=true;
     Scanner in = new Scanner(System.in);
-
-    System.out.println("Digite um número:");
-    number = in.nextInt();
-
-    int count = 0;
-
-    for (int i = 1; i <= number; i++) {
-      if (number % i == 0) {
-        if (number % number == 0) {
-          count++;
+    do {
+        System.out.println("Digite um numero: ");
+        n = in.nextLong();
+    }while(n<0);
+    if(n==1)
+        eprimo=false;
+    for(long i=n/2;i>1;i--){
+        if(n%i==0) {
+            eprimo = false;
+            break;
         }
-      }
     }
-
-    if (count == 2) {
-      System.out.println("O número " + number + " é primo.");
-      in.close();
-      return;
-    }
-
-    System.out.println("O número " + number + " não é primo.");
-
+    if(eprimo)
+        System.out.println("É primo");
+    else
+        System.out.println("Não é primo");
     in.close();
 
   }
