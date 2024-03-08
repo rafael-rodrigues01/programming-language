@@ -7,22 +7,20 @@ import java.util.Scanner;
 
 public class App {
   public static void main(String[] args) throws Exception {
-    int number, aux;
-    int a = 0;
-    int b = 1;
-
+    int n, n1, n2, aux;
+    n1 = 0;
+    n2 = 1;
+    System.out.println("Digite o limite esperado para a sequencia de Fibonacci: ");
     Scanner in = new Scanner(System.in);
+    n = in.nextInt();
+    System.out.println(0);
 
-    System.out.println("\nDigite um número para a seguência de fibonacci:");
-    number = in.nextInt();
-
-    for (int i = 0; i < number; i++) {
-      aux = b;
-      b = a + b;
-      a = aux;
-      System.out.println(a);
+    while (n2 < n) {
+      System.out.println(n2);
+      aux = n1;
+      n1 = n2;
+      n2 = aux + n2;
     }
-
     in.close();
   }
 }
