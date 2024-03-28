@@ -1,7 +1,7 @@
 
 // 8. Declare e inicialize uma matriz 5x5 em seguida exiba sua diagonal principal.
 
-public class Main {
+public class App {
   public static void main(String[] args) throws Exception {
     int [][] matrix = {
       { 1, 2, 3, 4, 5},
@@ -11,7 +11,7 @@ public class Main {
       {21,22,23,24,25}};
 
     for(int i = 0; i < 5; i++) {
-      System.out.print(matrix[i][i] + " ");
+      System.out.print(matrix[i][i] + ", ");
     }
   }
 
