@@ -1,3 +1,12 @@
 .vscode
 lib
 README.md
+*.iml
+# Ignorar arquivos específicos dentro do diretório .idea/
+.idea/.gitignore
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+
+# Ignorar o diretório de produção out/
+out/production/
